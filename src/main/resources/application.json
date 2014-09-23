@@ -1,0 +1,6 @@
+{
+	"url":"http://guialocal.cl/",	
+    "akka" : {
+        "loglevel": "DEBUG"
+    }
+}
