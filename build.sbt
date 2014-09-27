@@ -11,6 +11,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.5",
   "com.typesafe.akka" %% "akka-testkit" % "2.3.5",
   "com.typesafe" % "config" % "1.0.0",
-  "org.jsoup" % "jsoup" % "1.7.2"
+  "org.jsoup" % "jsoup" % "1.7.2",
+  "com.github.tototoshi" %% "scala-csv" % "1.0.0",
+  "com.typesafe.akka" %% "akka-contrib" % "2.3.5"
 )
 
