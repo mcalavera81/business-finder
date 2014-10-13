@@ -5,21 +5,34 @@ import org.jsoup.nodes.Element
 import akka.util.Timeout
 import scala.concurrent.duration._
 
-trait ParserUtil {
-  val AskTimeout = 120 // sec
-  val ConnectionTimeout = 10000 // millis
-  val throttleRate = 4// msgs/Sec
-  val retries = 3
 
-  implicit val timeout = Timeout(AskTimeout second)
-    
+object CommonUtil{
+	case class Link(url: String, name: String)
+}
+
+
+trait CommonUtil {
+  import CommonUtil._
+  
+  val AskTimeout = 10 // minutes
+  val ConnectionTimeout = 10000 // millis
+  val throttleRate = 1 
+  val retries = 3
+  val HttpRequestSleep= 5000 //millis
+
+  implicit val timeout = Timeout(AskTimeout day)
+
   implicit class MapExtensions[K, V](val map: Map[K, V]) {
     def updatedWith(key: K, default: V)(f: V => V) = {
       map.updated(key, f(map.getOrElse(key, default)))
     }
   }
 
-  implicit class AAA(elements: Elements) {
+  def extractLink(element: Element): Link = {
+    Link(element.attr("href").substring(1), element.text())
+  }
+
+  implicit class JsoupElementsUtils(elements: Elements) {
 
     def getFirst(): Option[Element] = {
       if (elements.isEmpty()) None else Some(elements.first())

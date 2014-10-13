@@ -2,7 +2,7 @@ package es.care.sf.scraper.worker
 
 import akka.actor.ActorLogging
 import akka.actor.Actor
-import es.care.sf.scraper.utils.ParserUtil
+import es.care.sf.scraper.utils.CommonUtil
 import org.jsoup.Jsoup
 import scala.util.Try
 import scala.util.Success
@@ -12,7 +12,7 @@ object HttpRequestWorker{
   case class GetDocument(url: String)
 }
 
-class HttpRequestWorker(rootUrl: String) extends Actor with ActorLogging with ParserUtil {
+class HttpRequestWorker(rootUrl: String) extends Actor with ActorLogging with CommonUtil {
 
   import HttpRequestWorker._
   
@@ -26,7 +26,11 @@ class HttpRequestWorker(rootUrl: String) extends Actor with ActorLogging with Pa
     	
     	wrapper match {
     		case  	Success(doc)=>sender ! doc
-    		case    Failure(e) => Thread.sleep(5000) 
+    		case    Failure(e) => {
+    		  log.warning(s"Error Handling request ${url}")
+    		  Thread.sleep(HttpRequestSleep)
+    		  self ! GetDocument(url)
+    		}
     	}
     	
     }  

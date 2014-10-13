@@ -3,7 +3,7 @@ package es.care.sf.scraper.worker
 import akka.actor.ActorLogging
 import akka.actor.Actor
 import akka.actor.ActorRef
-import es.care.sf.scraper.utils.ParserUtil
+import es.care.sf.scraper.utils.CommonUtil
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.Success
@@ -17,7 +17,7 @@ import org.jsoup.nodes.Document
 import scala.util.Try
 import akka.pattern.AskTimeoutException
 
-object BusinessWorker extends ParserUtil {
+object BusinessWorker extends CommonUtil {
   case class StartBusinessWorker(businessListUrl: String, businessUrl: String, retries: Int = retries)
   case class BusinessResult(
     url: String,
@@ -28,7 +28,7 @@ object BusinessWorker extends ParserUtil {
     productos: Option[List[String]])
 }
 
-class BusinessWorker(businessListWorker: ActorRef, rootUrl: String) extends Actor with ActorLogging with ParserUtil {
+class BusinessWorker(businessListWorker: ActorRef, rootUrl: String) extends Actor with ActorLogging with CommonUtil {
 
   import BusinessWorker._
   import es.care.sf.scraper.worker.BusinessListWorker._

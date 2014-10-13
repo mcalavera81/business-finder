@@ -9,16 +9,11 @@ import akka.actor.Props
 import es.care.sf.scraper.controller.BusinessCollector
 
 
-object Scraper extends App {
+object Scraper extends App{
 
   	import es.care.sf.scraper.controller.BusinessCollector._
   	
-  	case class Link(url: String, name: String)
-  
-  	def extractLink(element: Element):Link={
-  	  Link(element.attr("href").substring(1),element.text()) 
-  	}
-  
+  	
     val config = ConfigFactory.load()
     val rootUrl = config.getString("url")
     val system = ActorSystem("businesses-scraper-system")

@@ -4,28 +4,27 @@ import scala.collection.JavaConversions._
 import scala.concurrent.ExecutionContext
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import akka.pattern.pipe
-import org.jsoup.Jsoup
+import scala.util.Try
+import org.jsoup.nodes.Document
 import akka.actor.Actor
 import akka.actor.ActorLogging
 import akka.actor.ActorRef
-import es.care.sf.scraper.main.Scraper._
-import es.care.sf.scraper.utils.ParserUtil
 import akka.actor.Props
-import akka.routing.SmallestMailboxRouter
-import es.care.sf.scraper.worker.BusinessWorker._
+import akka.pattern.AskTimeoutException
 import akka.pattern.ask
-import es.care.sf.scraper.worker.HttpRequestWorker._
+import akka.pattern.pipe
+import akka.routing.SmallestMailboxRouter
 import akka.util.Timeout
-import scala.concurrent.duration._
-import org.jsoup.nodes.Document
+import es.care.sf.scraper.main.Scraper._
+import es.care.sf.scraper.utils.CommonUtil
+import es.care.sf.scraper.worker.BusinessWorker._
+import es.care.sf.scraper.worker.HttpRequestWorker._
+import es.care.sf.scraper.utils.CommonUtil._
 import scala.util.Success
 import scala.util.Failure
-import scala.util.Try
-import akka.pattern.AskTimeoutException
-import scala.util.Success
+import scala.concurrent.duration._
 
-object BusinessListWorker extends ParserUtil {
+object BusinessListWorker extends CommonUtil {
 
   case class BusinessListResult(listUrl: Link, businesses: List[Link], nextPage: Option[Link] = None)
   case class StartBusinessListParser(category: Link, retries: Int = retries)
@@ -34,12 +33,12 @@ object BusinessListWorker extends ParserUtil {
   case class SaveBusinessResult(listUrl: String, result: Option[BusinessResult])
 
 }
-class BusinessListWorker(businessCollector: ActorRef, rootUrl: String) extends Actor with ActorLogging with ParserUtil {
+class BusinessListWorker(businessCollector: ActorRef, rootUrl: String) extends Actor with ActorLogging with CommonUtil {
 
   import es.care.sf.scraper.controller.BusinessCollector._
   import BusinessListWorker._
 
-  val pages = context.actorOf(Props(new BusinessWorker(self, rootUrl)).withRouter(SmallestMailboxRouter(1)), name = "Business")
+  val pages = context.actorOf(Props(new BusinessWorker(self, rootUrl)).withRouter(SmallestMailboxRouter(2)), name = "Business")
 
   var pageUrls = Map[String, List[String]]()
 
@@ -91,6 +90,7 @@ class BusinessListWorker(businessCollector: ActorRef, rootUrl: String) extends A
 
         updatedUrls
       }
+      
     }
     case AddBusinessUrl(listUrl, url) => {
       pageUrls = pageUrls.updatedWith(listUrl, List.empty) { url :: _ }
@@ -98,14 +98,12 @@ class BusinessListWorker(businessCollector: ActorRef, rootUrl: String) extends A
     }
 
     case BusinessListResult(businessListLink, businesses, Some(nextPage)) => {
-      log.debug(s"Adding a new page: ${nextPage}")
+      
       businessCollector ! AddBusinessList(nextPage)
       self ! BusinessListResult(businessListLink, businesses)
     }
 
     case BusinessListResult(businessListLink, businesses, None) => {
-      log.debug(s"Adding new businesses: ${businesses}")
-      //businessCollector ! SaveBusinesses(businesses, businessListLink)
 
       if (businesses.isEmpty) businessCollector ! RemoveBusinessList(businessListLink.url)
 
@@ -121,10 +119,6 @@ class BusinessListWorker(businessCollector: ActorRef, rootUrl: String) extends A
   def parseBusinessList(businessListLink: Link): Future[BusinessListResult] = {
 
     val Link(businessListUrl, _) = businessListLink
-
-    //Thread.sleep(throttle)
-
-    //val doc = Jsoup.connect(rootUrl + "/" + businessListUrl).timeout(ConnectionTimeout).get()
 
     val emptyResult = BusinessListResult(businessListLink, List.empty, None)
 

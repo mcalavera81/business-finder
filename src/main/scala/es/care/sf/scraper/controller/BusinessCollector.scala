@@ -18,7 +18,7 @@ import akka.pattern.pipe
 import akka.routing.SmallestMailboxRouter
 import akka.util.Timeout
 import es.care.sf.scraper.main.Scraper._
-import es.care.sf.scraper.utils.ParserUtil
+import es.care.sf.scraper.utils.CommonUtil
 import es.care.sf.scraper.worker.BusinessListWorker
 import es.care.sf.scraper.worker.BusinessWorker._
 import es.care.sf.scraper.worker.HttpRequestWorker._
@@ -26,9 +26,10 @@ import es.care.sf.scraper.worker.HttpRequestWorker
 import scala.concurrent.duration._
 import org.jsoup.nodes.Document
 import scala.concurrent.ExecutionContext.Implicits.global
+import es.care.sf.scraper.utils.CommonUtil._
 
 object BusinessCollector {
-  case object StartScraper
+  case class StartScraper
   case class AddRegion(link: Link)
   case class AddArea(link: Link, region: Link)
   case class RemoveBusinessList(businessList: String)
@@ -37,7 +38,7 @@ object BusinessCollector {
   case class BusinessesResults(results: List[BusinessResult], businessListUrl: String)
 }
 
-class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with ParserUtil {
+class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with CommonUtil {
 
   import BusinessCollector._
   import es.care.sf.scraper.worker.BusinessListWorker._
@@ -54,18 +55,16 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
 
     val httpReqWorker = system.actorOf(Props(new HttpRequestWorker(rootUrl)), "httpRequestWorker")
 
-    throttler = system.actorOf(Props(new TimerBasedThrottler(new Rate(throttleRate, Duration(1, TimeUnit.SECONDS)))), "throttler")
+    throttler = system.actorOf(Props(new TimerBasedThrottler(new Rate(throttleRate, Duration(500, TimeUnit.MILLISECONDS)))), "throttler")
 
     throttler ! SetTarget(Some(httpReqWorker))
-    
-    lists = context.actorOf(Props(new BusinessListWorker(self, rootUrl)).withRouter(SmallestMailboxRouter(1)), name = "BusinessList")
+
+    lists = context.actorOf(Props(new BusinessListWorker(self, rootUrl)).withRouter(SmallestMailboxRouter(3)), name = "BusinessList")
   }
 
   def receive = {
 
     case StartScraper => {
-
-      //val doc = Jsoup.connect(rootUrl).timeout(ConnectionTimeout).get()
 
       (throttler ? GetDocument("")).mapTo[Document].onSuccess {
         case doc => {
@@ -73,7 +72,7 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
 
           regions.foreach(println)
 
-          regions.take(2).foreach {
+          regions.find(_.url == "regionmetropolitana") foreach {
             region => self ! AddRegion(region)
           }
         }
@@ -82,7 +81,6 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
     }
 
     case AddRegion(region) => {
-      //val doc = Jsoup.connect(rootUrl + "/" + region.url).timeout(ConnectionTimeout).get()
 
       (throttler ? GetDocument(region.url)).mapTo[Document].onSuccess {
         case doc => {
@@ -91,7 +89,7 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
           println(s"*********Area: ${region}*********")
           allAreas.foreach(println)
 
-          allAreas.take(2).foreach {
+          allAreas.foreach {
             area => self ! AddArea(area, region)
           }
 
@@ -106,12 +104,10 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
 
       if (businessListUrls.isEmpty) {
         println(s"***********RESULTS START(${businessUrls.size})************")
-        businessUrls.foreach {
-          entry => println(s"${entry._2.size} businesses were found for category ${entry._1}")
-        }
-        println(businessUrls)
 
-        val file = new File("aaa.csv")
+        val file = new File(s"aaa.csv")
+        if (file.exists()) file.delete()
+        file.createNewFile()
         val writer = CSVWriter.open(file)
 
         implicit class OptionalListToString(optList: Option[List[String]]) {
@@ -155,18 +151,17 @@ class BusinessCollector(rootUrl: String) extends Actor with ActorLogging with Pa
 
     case AddArea(area, region) => {
       log.info(s"Added area ${area.name} in region $region")
-      //Thread.sleep(throttle)
-
-      //val doc = Jsoup.connect(rootUrl + "/" + area.url).timeout(ConnectionTimeout).get()
 
       (throttler ? GetDocument(area.url)).mapTo[Document].onSuccess {
         case doc => {
           val categories = doc.select("ul#categoriesList li a[href]").map(extractLink)
 
-          categories.take(1).foreach {
+          categories.foreach {
             category =>
-              log.info(s"Added category ${category.name} in area ${area.name}")
-              self ! AddBusinessList(category)
+              {
+                log.info(s"Added category ${category.name} in area ${area.name}")
+                self ! AddBusinessList(category)
+              }
           }
 
         }

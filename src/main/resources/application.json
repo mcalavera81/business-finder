@@ -1,6 +1,11 @@
 {
 	"url":"http://guialocal.cl/",	
     "akka" : {
-        "loglevel": "DEBUG"
+        "loglevel": "DEBUG",
+        "actor":{
+        	"debug":{
+        		"lifecycle":"on"
+        	}
+        }
     }
 }

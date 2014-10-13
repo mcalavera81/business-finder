@@ -1,0 +1,315 @@
+[DEBUG] [10/13/2014 01:10:09.037] [main] [EventStream(akka://businesses-scraper-system)] logger log1-Logging$DefaultLogger started
+[DEBUG] [10/13/2014 01:10:09.037] [main] [EventStream(akka://businesses-scraper-system)] Default Loggers started
+[DEBUG] [10/13/2014 01:10:09.042] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/system] now supervising Actor[akka://businesses-scraper-system/system/deadLetterListener#1107042798]
+[DEBUG] [10/13/2014 01:10:09.047] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user] now supervising Actor[akka://businesses-scraper-system/user/CollectorService#1371346815]
+[DEBUG] [10/13/2014 01:10:09.052] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/system/deadLetterListener] started (akka.event.DeadLetterListener@48fd918a)
+[DEBUG] [10/13/2014 01:10:09.057] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/user] now supervising Actor[akka://businesses-scraper-system/user/httpRequestWorker#-2131262153]
+[DEBUG] [10/13/2014 01:10:09.057] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/user/httpRequestWorker] started (es.care.sf.scraper.worker.HttpRequestWorker@112c3327)
+[DEBUG] [10/13/2014 01:10:09.062] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user] now supervising Actor[akka://businesses-scraper-system/user/throttler#-2087408132]
+[DEBUG] [10/13/2014 01:10:09.092] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/throttler] started (akka.contrib.throttle.TimerBasedThrottler@3aa83a13)
+[DEBUG] [10/13/2014 01:10:09.102] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] started (es.care.sf.scraper.controller.BusinessCollector@1ee29820)
+[DEBUG] [10/13/2014 01:10:09.102] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList#317655098]
+[DEBUG] [10/13/2014 01:10:09.102] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$a] started (es.care.sf.scraper.worker.BusinessWorker@5c391c3)
+[DEBUG] [10/13/2014 01:10:09.102] [businesses-scraper-system-akka.actor.default-dispatcher-13] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$b] started (es.care.sf.scraper.worker.BusinessWorker@79a61172)
+[DEBUG] [10/13/2014 01:10:09.102] [businesses-scraper-system-akka.actor.default-dispatcher-12] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$a] started (es.care.sf.scraper.worker.BusinessWorker@79a61172)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-13] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$b] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business#-987164385]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-12] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$a] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business#-987164385]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$a] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business#663244241]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b] started (es.care.sf.scraper.worker.BusinessListWorker@45e67e6a)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a] started (es.care.sf.scraper.worker.BusinessListWorker@6a969c29)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business#663244241]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business#-1794344554]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList#317655098]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-2] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList#317655098]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-8] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$b] started (es.care.sf.scraper.worker.BusinessWorker@5c6ed322)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-8] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$b] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business#663244241]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-7] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c] started (es.care.sf.scraper.worker.BusinessListWorker@6fe78c96)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-7] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business#-987164385]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-7] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList#317655098]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-11] [akka://businesses-scraper-system/user/CollectorService/BusinessList] started (akka.routing.RouterPoolActor@18330bf)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-11] [akka://businesses-scraper-system/user/CollectorService/BusinessList] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a#633427603]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-11] [akka://businesses-scraper-system/user/CollectorService/BusinessList] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b#-822457611]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-11] [akka://businesses-scraper-system/user/CollectorService/BusinessList] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c#-1744414168]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$b] started (es.care.sf.scraper.worker.BusinessWorker@4bf54c5f)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$b] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business#-1794344554]
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$a] started (es.care.sf.scraper.worker.BusinessWorker@556917ee)
+[DEBUG] [10/13/2014 01:10:09.107] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$a] now watched by Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business#-1794344554]
+[DEBUG] [10/13/2014 01:10:09.112] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business] started (akka.routing.RouterPoolActor@62c2ee15)
+[DEBUG] [10/13/2014 01:10:09.112] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$a#1424371389]
+[DEBUG] [10/13/2014 01:10:09.112] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$a/Business/$b#-1871634111]
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-12] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business] started (akka.routing.RouterPoolActor@59d0d45b)
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-12] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$a#620144223]
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-12] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$b/Business/$b#-1849644398]
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-13] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business] started (akka.routing.RouterPoolActor@71bfc4fc)
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-13] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$a#-25403342]
+[DEBUG] [10/13/2014 01:10:09.117] [businesses-scraper-system-akka.actor.default-dispatcher-13] [akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business] now supervising Actor[akka://businesses-scraper-system/user/CollectorService/BusinessList/$c/Business/$b#-1429450568]
+[DEBUG] [10/13/2014 01:10:09.127] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//
+Link(vregion,Valparaíso (V))
+Link(iregion,Tarapacá (I))
+Link(viregion,O'Higgins (VI))
+Link(regionmetropolitana,Metropolitana (RM))
+Link(viiregion,Maule (VII))
+Link(xiiregion,Magallanes (XII))
+Link(xivregion,Los Ríos (XIV))
+Link(xregion,Los Lagos (X))
+Link(ivregion,Coquimbo (IV))
+Link(viiiregion,Biobío (VIII))
+Link(xiregion,Aysén (XI))
+Link(iiiregion,Atacama (III))
+Link(xvregion,Arica y Parinacota (XV))
+Link(ixregion,Araucanía (IX))
+Link(iiregion,Antofagasta (II))
+[DEBUG] [10/13/2014 01:10:11.363] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//regionmetropolitana
+*********Area: Link(regionmetropolitana,Metropolitana (RM))*********
+Link(vitacura,Vitacura)
+Link(valdiviadepaine,Valdivia de Paine)
+Link(tiltil,Tiltil)
+Link(talagante,Talagante)
+Link(santiago,Santiago)
+Link(santaanadechena,Santa Ana de Chena)
+Link(sanramon,San Ramón)
+Link(sanmiguelderegionmetropolitana,San Miguel)
+Link(sanjosedemaipo,San José de Maipo)
+Link(sanjoaquin,San Joaquín)
+Link(sanbernardoderegionmetropolitana,San Bernardo)
+Link(sanalfonso,San Alfonso)
+Link(renca,Renca)
+Link(recoletaderegionmetropolitana,Recoleta)
+Link(quintanormal,Quinta Normal)
+Link(quilicura,Quilicura)
+Link(puentealto,Puente Alto)
+Link(pudahuel,Pudahuel)
+Link(providencia,Providencia)
+Link(pomaire,Pomaire)
+Link(pirque,Pirque)
+Link(penalolen,Peñalolén)
+Link(penaflor,Peñaflor)
+Link(pedroaguirrecerda,Pedro Aguirre Cerda)
+Link(paine,Paine)
+Link(padrehurtado,Padre Hurtado)
+Link(nunoa,Ñuñoa)
+Link(melipilla,Melipilla)
+Link(mariapinto,María Pinto)
+Link(malloco,Malloco)
+Link(maipuderegionmetropolitana,Maipú)
+Link(maipo,Maipo)
+Link(macul,Macul)
+Link(losguindos,Los Guindos)
+Link(loprado,Lo Prado)
+Link(loespejo,Lo Espejo)
+Link(lobarnechea,Lo Barnechea)
+Link(linderos,Linderos)
+Link(lascondes,Las Condes)
+Link(lampa,Lampa)
+Link(lareina,La Reina)
+Link(lapintana,La Pintana)
+Link(lagranjaderegionmetropolitana,La Granja)
+Link(laflorida,La Florida)
+Link(lacisterna,La Cisterna)
+Link(islademaipo,Isla de Maipo)
+Link(independencia,Independencia)
+Link(huechuraba,Huechuraba)
+Link(hospital,Hospital)
+Link(estacioncentral,Estación Central)
+Link(elmonte,El Monte)
+Link(elbosque,El Bosque)
+Link(curacavi,Curacaví)
+Link(conchali,Conchalí)
+Link(colina,Colina)
+Link(cerronavia,Cerro Navia)
+Link(cerrillos,Cerrillos)
+Link(caleradetango,Calera de Tango)
+Link(cajondelmaipo,Cajón Del Maipo)
+Link(buin,Buin)
+Link(batuco,Batuco)
+[INFO] [10/13/2014 01:10:12.823] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Vitacura in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Valdivia de Paine in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Tiltil in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Talagante in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Santiago in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area Santa Ana de Chena in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area San Ramón in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area San Miguel in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area San José de Maipo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/CollectorService] Added area San Joaquín in region Link(regionmetropolitana,Metropolitana (RM))
+[DEBUG] [10/13/2014 01:10:12.824] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//vitacura
+[INFO] [10/13/2014 01:10:12.834] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area San Bernardo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.834] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area San Alfonso in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.834] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Renca in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.834] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Recoleta in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.834] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Quinta Normal in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Quilicura in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Puente Alto in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Pudahuel in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Providencia in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Pomaire in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Pirque in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Peñalolén in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Peñaflor in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Pedro Aguirre Cerda in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Paine in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Padre Hurtado in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Ñuñoa in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Melipilla in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area María Pinto in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Malloco in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Maipú in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Maipo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Macul in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Los Guindos in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Lo Prado in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.839] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Lo Espejo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Lo Barnechea in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Linderos in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Las Condes in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Lampa in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area La Reina in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area La Pintana in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area La Granja in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area La Florida in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area La Cisterna in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Isla de Maipo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Independencia in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Huechuraba in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Hospital in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Estación Central in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area El Monte in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area El Bosque in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Curacaví in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Conchalí in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Colina in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Cerro Navia in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Cerrillos in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Calera de Tango in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.844] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Cajón Del Maipo in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.849] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Buin in region Link(regionmetropolitana,Metropolitana (RM))
+[INFO] [10/13/2014 01:10:12.849] [businesses-scraper-system-akka.actor.default-dispatcher-4] [akka://businesses-scraper-system/user/CollectorService] Added area Batuco in region Link(regionmetropolitana,Metropolitana (RM))
+[DEBUG] [10/13/2014 01:10:17.111] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//valdiviadepaine
+[INFO] [10/13/2014 01:10:17.116] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Viajes y Turismo in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Empresas in area Vitacura
+[DEBUG] [10/13/2014 01:10:17.121] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 1
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Organismos Oficiales e Instituciones in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Industria y Construcción in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Transporte y Mudanzas in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Domicilio in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Eventos y Festejos in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Animales y Mascotas in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Alimentos y Bebidas in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Enseñanza in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios Profesionales in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Automotores in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Entretenimiento y Deportes in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Inmobiliarias y Bienes Raíces in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Medicina y Salud in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Informatica y Electrónica in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Finanzas, Seguros y Legales in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios con Sucursales in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios Minoristas y Mayoristas in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Moda y Belleza in area Vitacura
+[INFO] [10/13/2014 01:10:17.121] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Restaurantes y Bares in area Vitacura
+[DEBUG] [10/13/2014 01:10:17.126] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 2
+[DEBUG] [10/13/2014 01:10:17.126] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 3
+[DEBUG] [10/13/2014 01:10:17.126] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 4
+[DEBUG] [10/13/2014 01:10:17.126] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 5
+[DEBUG] [10/13/2014 01:10:17.126] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 6
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 7
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 8
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 9
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 10
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 11
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 12
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 13
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 14
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 15
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 16
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 17
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 18
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 19
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 20
+[DEBUG] [10/13/2014 01:10:17.127] [businesses-scraper-system-akka.actor.default-dispatcher-9] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 21
+[DEBUG] [10/13/2014 01:10:21.408] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//tiltil
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Viajes y Turismo in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Empresas in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Organismos Oficiales e Instituciones in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Industria y Construcción in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Transporte y Mudanzas in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Domicilio in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Eventos y Festejos in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Animales y Mascotas in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Alimentos y Bebidas in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Enseñanza in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios Profesionales in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Automotores in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Entretenimiento y Deportes in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Inmobiliarias y Bienes Raíces in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Medicina y Salud in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Informatica y Electrónica in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Finanzas, Seguros y Legales in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios con Sucursales in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios Minoristas y Mayoristas in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Moda y Belleza in area Valdivia de Paine
+[INFO] [10/13/2014 01:10:21.411] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Restaurantes y Bares in area Valdivia de Paine
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 22
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 23
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 24
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 25
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 26
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 27
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 28
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 29
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 30
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 31
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 32
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 33
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 34
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 35
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 36
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 37
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 38
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 39
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 40
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-5] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 41
+[DEBUG] [10/13/2014 01:10:21.416] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 42
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-3] [akka://businesses-scraper-system/user/httpRequestWorker] Handling request to http://guialocal.cl//talagante
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Viajes y Turismo in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Empresas in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Organismos Oficiales e Instituciones in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Industria y Construcción in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Transporte y Mudanzas in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios a Domicilio in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Eventos y Festejos in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Animales y Mascotas in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Alimentos y Bebidas in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Enseñanza in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Servicios Profesionales in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Automotores in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Entretenimiento y Deportes in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Inmobiliarias y Bienes Raíces in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Medicina y Salud in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Informatica y Electrónica in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Finanzas, Seguros y Legales in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios con Sucursales in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Comercios Minoristas y Mayoristas in area Tiltil
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Moda y Belleza in area Tiltil
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 43
+[INFO] [10/13/2014 01:10:24.794] [ForkJoinPool-2-worker-7] [akka://businesses-scraper-system/user/CollectorService] Added category Restaurantes y Bares in area Tiltil
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 44
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 45
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 46
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-10] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 47
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 48
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 49
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 50
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 51
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 52
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 53
+[DEBUG] [10/13/2014 01:10:24.794] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 54
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 55
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 56
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 57
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 58
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 59
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 60
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 61
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 62
+[DEBUG] [10/13/2014 01:10:24.799] [businesses-scraper-system-akka.actor.default-dispatcher-6] [akka://businesses-scraper-system/user/CollectorService] businessListUrls size is 63
